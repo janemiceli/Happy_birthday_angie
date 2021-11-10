@@ -1,10 +1,9 @@
-
-var customMessages = "JANE"
-var customMessages1 = "TIM"
-var customMessages2 = "ARIA"
-var customMessages3 = "CONNOR"
-var customMessages4 = "MICELIS"
-const messages = ["JANE","TIM", "ARIA","CONNOR","MICELIS"]
+var customMessages = "HAPPY"
+var customMessages1 = "BIRTHDAY"
+var customMessages2 = "ANGELA"
+var customMessages3 = "BAUTER"
+var customMessages4 = "PURPLE"
+const messages = ["HAPPY","BIRTHDAY", "ANGELA","BAUTER"]
 //var customMessages=true;
 //var randomCharacters = true;
 var pinkrain = 0;
@@ -12,7 +11,7 @@ var greenrain = 104;
 var bluerain = 207;
 var purplerain = 255;
 
-var colorrain = greenrain;
+var colorrain = purplerain;
 
 var M = {
         settings: {

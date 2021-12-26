@@ -181,10 +181,10 @@ var M = {
             if (i %2 == 1){
                 for (j = 1; j < codeLen; j += 1) {
                     text = M.codes[i][j];
-                    if (j < 5) {
+                    if (j < 3) {
                         newCtx.shadowColor = 'hsla(' + colorrain + ', 79%, 72%)';
-                        newCtx.shadowBlur = 5;
-                        newCtx.fillStyle = 'hsla(' + colorrain + ', 79%, ' + (100 - (j * 5)) + '%, ' + strength + ')';
+                        newCtx.shadowBlur = 3;
+                        newCtx.fillStyle = 'hsla(' + colorrain + ', 79%, ' + (100 - (j * 3)) + '%, ' + strength + ')';
                     } else if (j > (codeLen - 3)) {
                         fadeStrength = j / codeLen;
                         fadeStrength = 1 - fadeStrength;
@@ -200,8 +200,8 @@ var M = {
                     text = M.codes[i][j];
                     if (j < (codeLen -3 ) ) {
                         newCtx.shadowColor = 'hsla(' + colorrain + ', 79%, 74%, ' + strength + ')';
-                        newCtx.shadowBlur = 5;
-                        newCtx.fillStyle = 'hsla(' + colorrain + ', 79%, ' + (j * 3) + '%, ' + strength + ')';
+                        newCtx.shadowBlur = 3;
+                        newCtx.fillStyle = 'hsla(' + colorrain + ', 79%, ' + (100 - (j * 3)) + '%, ' + strength + ')';
                     } else if (j < 3) {
                         fadeStrength =  (j / codeLen);
                         fadeStrength =  fadeStrength;

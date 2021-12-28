@@ -14,15 +14,16 @@ var M = {
             COL_WIDTH: 20,
             COL_HEIGHT: 25,
             VELOCITY_PARAMS: {
-                min: 3,
-                max: 7
+                min: 1,
+                max: 2
             },
             CODE_LENGTH_PARAMS: {
-                min: 4,
+                min: 3,
                 max: 20
             }
         },
         animation: null,
+        c: null,
         ctx: null,
         lineC: null,
         ctx2: null,
@@ -76,7 +77,6 @@ var M = {
             "use strict";
             M.animation = requestAnimationFrame(function () { M.loop(); });
             M.draw();
-            //stats.update();
         },
         draw: function () {
             "use strict";
@@ -109,7 +109,6 @@ var M = {
                             M.codes[i][0].position.y = 0;
                         }
                     }
-
                 }
             }
         },
@@ -121,15 +120,15 @@ var M = {
                 var codeVelocity = (Math.random() * (M.settings.VELOCITY_PARAMS.max - M.settings.VELOCITY_PARAMS.min)) + M.settings.VELOCITY_PARAMS.min, lettersLength = M.letters.length, newLetter = 0;
                 codeLength = M.randomFromInterval(M.settings.CODE_LENGTH_PARAMS.min, M.settings.CODE_LENGTH_PARAMS.max);
                     
-                if ( M.codesCounter%2 == 0 ){
+                //if ( M.codesCounter%2 == 0 ){
                     M.codes[column][0].position = {'x': (column * M.settings.COL_WIDTH), 'y': 0};
                     M.codes[column][0].velocity = codeVelocity;
                     M.codes[column][0].strength = M.codes[column][0].velocity / M.settings.VELOCITY_PARAMS.max;
-                }else{
-                    M.codes[column][0].position = {'x': (column * M.settings.COL_WIDTH), 'y': 0};
-                    M.codes[column][0].velocity = -codeVelocity;
-                    M.codes[column][0].strength = (M.codes[column][0].velocity * -1) / M.settings.VELOCITY_PARAMS.max;
-                }
+                //}else{
+                   // M.codes[column][0].position = {'x': (column * M.settings.COL_WIDTH), 'y': 0};
+                    //M.codes[column][0].velocity = -codeVelocity;
+                    //M.codes[column][0].strength = (M.codes[column][0].velocity * -1) / M.settings.VELOCITY_PARAMS.max;
+                //}
                 M.CheckArray(codeLength, messages, column, lettersLength)
                 M.createCanvii(column);
                 M.codesCounter += 1;
